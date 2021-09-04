@@ -1,11 +1,13 @@
 import React from 'react'
+import { useAuth } from 'providers/authProvider'
 
-import './login.less'
+import './style.less'
 
-const Login = ({setLogin}) => {
+const Login = () => {
+  const { siginDispatch } = useAuth()
   const handleSubmit = (event) => {
     event.preventDefault()
-    setLogin(true)
+    siginDispatch()
   }
   return (
     <form className='login' onSubmit={handleSubmit} >
