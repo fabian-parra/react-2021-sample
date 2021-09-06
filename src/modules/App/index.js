@@ -1,18 +1,24 @@
 import React, { useReducer } from 'react'
-import Routes from 'routes'
+import styled from 'styled-components'
+import Router from 'Router'
 import AuthProvider from 'providers/authProvider'
 
-import './style.less'
-
 const App = () => {
-
   return (
-    <main className='app'>
+    <Main>
       <AuthProvider>
-        <Routes />
+        <Router />
       </AuthProvider>
-    </main>
+    </Main>
   ) 
 }
+
+const Main = styled.main`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
 
 export default App

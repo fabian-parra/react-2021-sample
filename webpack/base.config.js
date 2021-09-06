@@ -1,8 +1,5 @@
 const webpack = require('webpack')
 const path = require('path')
-const autoprefixer = require('autoprefixer')
-const postcssImport = require('postcss-import')
-const postcssUrl = require('postcss-url')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const root = path.resolve(__dirname, '..')
@@ -12,7 +9,8 @@ module.exports = {
   entry: path.resolve(root, 'src', 'index.js'),
   mode: 'development',
   output: {
-    filename: 'bundle.js',
+    filename: '[contenthash].bundle.js',
+    chunkFilename: '[contenthash].bundle.js',
     path: path.resolve(root, 'dist')
   },
   resolve: {
@@ -25,20 +23,6 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.less$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'less-loader'
-          }
-        ]
-      },
       {
         test: /\.js$/, 
         exclude: /node_modules/,

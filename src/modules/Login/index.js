@@ -1,21 +1,19 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
+import Form from 'components/form'
 import { useAuth } from 'providers/authProvider'
-
-import './style.less'
 
 const Login = () => {
   const { siginDispatch } = useAuth()
-  const handleSubmit = (event) => {
-    event.preventDefault()
+  const history = useHistory()
+
+  const action = (username, password) => {
+    //validate username and password
     siginDispatch()
+    history.push('/dashboard')
   }
   return (
-    <form className='login' onSubmit={handleSubmit} >
-      <h1>Identificate en la aplicaci&oacute;n</h1>
-      <input type='text' placeholder='nombre de usuario' />
-      <input type='password' placeholder='contraseña' />
-      <input type='submit' value='Ingresar' />
-    </form>
+    <Form {...{action}}/>
   )
 }
 

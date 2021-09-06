@@ -1,7 +1,10 @@
 import { render } from 'react-dom'
 import React from 'react'
+import GlobalStyle from 'styles/globalStyle'
 import App from 'modules/App'
 
-import './styles/cleanUp.less'
-
-render(<App />, document.getElementById('root'))
+render((
+  <>
+    <GlobalStyle />  
+    <App />
+  </>), document.getElementById('root'))
