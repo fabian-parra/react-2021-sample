@@ -1,6 +1,9 @@
-const siginDispatch = (dispatch) => () => {
+const siginDispatch = (dispatch) => ({username, name, token}) => {
   const action = {
-    type: 'sigin'
+    type: 'sigin',
+    token,
+    name,
+    username
   }
   return dispatch(action)
 }

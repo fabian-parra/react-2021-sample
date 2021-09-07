@@ -1,0 +1,17 @@
+[
+  {
+    "request": {
+      "method": "POST",
+      "post": "{.*\"username\":\"f0p015w\",\"password\":\"12345\".*}",
+      "url": "^/sigin"
+    },
+    "response": {
+      "file": "test/stubs/sigin.json",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "latency": 1200,
+      "status": 200
+    }
+  }
+]

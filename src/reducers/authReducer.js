@@ -1,6 +1,9 @@
 export const authInitialState = {
   auth: false,
-  siginTimestamp: null
+  siginTimestamp: null,
+  name: null,
+  username: null,
+  token: null
 }
 
 export const authReducer = (state, action) => {
@@ -9,7 +12,10 @@ export const authReducer = (state, action) => {
       return {
         ...state,
         auth: true,
-        siginTimestamp: Date.now()
+        siginTimestamp: Date.now(),
+        name: action.name,
+        username: action.username,
+        token: action.token
       }
   }
 }

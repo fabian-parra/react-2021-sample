@@ -1,19 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import Form from 'components/form'
 import { useAuth } from 'providers/authProvider'
+import { authenticateUser } from 'services/login'
+import Form from 'components/form'
 
 const Login = () => {
   const { siginDispatch } = useAuth()
+  const [isLoading, setLoading] = useState(false)
   const history = useHistory()
 
   const action = (username, password) => {
-    //validate username and password
-    siginDispatch()
-    history.push('/dashboard')
+    setLoading(true)
+    authenticateUser(username, password)
+    .then(user => {
+      siginDispatch(user)
+      history.push('/dashboard')
+    })
+    .finally(() => {
+      setLoading(false)
+    })
   }
   return (
-    <Form {...{action}}/>
+    isLoading ? <div>Cargando</div> : <Form {...{action}}/>
   )
 }
 
