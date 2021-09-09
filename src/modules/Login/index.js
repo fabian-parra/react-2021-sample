@@ -1,27 +1,27 @@
-import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import React, { useState, useMemo } from 'react'
+import { Redirect } from 'react-router-dom'
 import { useAuth } from 'providers/authProvider'
 import { authenticateUser } from 'services/login'
 import Form from 'components/form'
 
 const Login = () => {
-  const { siginDispatch } = useAuth()
+  const { state, siginDispatch } = useAuth()
   const [isLoading, setLoading] = useState(false)
-  const history = useHistory()
+  const isLoadingMemo = useMemo(() => isLoading, [isLoading])
 
-  const action = (username, password) => {
+  const action = useMemo(() => (username, password) => {
     setLoading(true)
     authenticateUser(username, password)
-    .then(user => {
-      siginDispatch(user)
-      history.push('/dashboard')
-    })
+    .then(siginDispatch)
     .finally(() => {
       setLoading(false)
     })
-  }
+  }, [])
+
   return (
-    isLoading ? <div>Cargando</div> : <Form {...{action}}/>
+    isLoadingMemo ? <div>Cargando</div> : 
+    state.auth ? <Redirect to='/dashboard' /> :
+    <Form {...{action}}/>
   )
 }
 

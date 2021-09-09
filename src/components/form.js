@@ -10,7 +10,7 @@ const Form = ({action}) => {
     action(username, password)
   }
 
-  const onChangeValue = (set) => (event) => set(event.target.value)
+  const onChangeValue = set => event => set(event.target.value)
 
   return (
     <StyledForm onSubmit={handleSubmit} >

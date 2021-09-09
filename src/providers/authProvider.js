@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react'
+import React, { useReducer, useMemo } from 'react'
 import { authReducer, authInitialState } from 'reducers/authReducer'
 import { actions } from 'actions/authActions'
 
@@ -6,9 +6,10 @@ const AuthContext = React.createContext(null)
 const AuthProvider = ({children}) => {
   const [state, dispatch] = useReducer(authReducer, authInitialState)
   const authActions = actions(dispatch)
+  const contextMemoize = useMemo(() => ({state, ...authActions}), [state])
 
   return (
-    <AuthContext.Provider value={{state, ...authActions}}>
+    <AuthContext.Provider value={contextMemoize}>
       {children}
     </AuthContext.Provider>
   )
