@@ -1,10 +1,7 @@
-const BASE_URL = 'http://localhost:8882'
-const AUTH_ENDPOINT = '/sigin'
+import { fetchData } from './base'
 
-const fetchData = (url, path) => (options) => fetch(`${url}${path}`, options)
-  .then(response => response.json())
-
-const fetchAuth = fetchData(BASE_URL, AUTH_ENDPOINT)
+const ENDPOINT = '/sigin'
+const fetchAuth = fetchData(ENDPOINT)
 
 export const authenticateUser = (username, password) => {
   const options = {

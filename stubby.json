@@ -13,5 +13,22 @@
       "latency": 1200,
       "status": 200
     }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "url": "^/verify",
+      "headers": {
+        "authorization": "Bearer tokenfakeforauthallcalls"
+      }
+    },
+    "response": {
+      "file": "test/stubs/sigin.json",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "latency": 1200,
+      "status": 200
+    }
   }
 ]
