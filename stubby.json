@@ -6,7 +6,7 @@
       "url": "^/sigin"
     },
     "response": {
-      "file": "test/stubs/sigin.json",
+      "file": "stubs/sigin.json",
       "headers": {
         "Content-Type": "application/json"
       },
@@ -23,7 +23,7 @@
       }
     },
     "response": {
-      "file": "test/stubs/sigin.json",
+      "file": "stubs/sigin.json",
       "headers": {
         "Content-Type": "application/json"
       },

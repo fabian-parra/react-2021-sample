@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack server --progress -c ./webpack/base.config.js",
     "stubby": "stubby --watch -d stubby.json -s 8882",
-    "test:unit": "jest"
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
