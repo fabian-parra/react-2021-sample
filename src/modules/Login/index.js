@@ -12,16 +12,16 @@ const Login = () => {
   const action = useMemo(() => (username, password) => {
     setLoading(true)
     authenticateUser(username, password)
-    .then(siginDispatch)
-    .finally(() => {
-      setLoading(false)
-    })
+      .then(siginDispatch)
+      .finally(() => {
+        setLoading(false)
+      })
   }, [])
 
   return (
-    isLoadingMemo ? <div>Cargando</div> : 
-    state.auth ? <Redirect to='/dashboard' /> :
-    <Form {...{action}}/>
+    isLoadingMemo ? <div>Cargando</div>
+      : state.auth ? <Redirect to="/dashboard" />
+        : <Form {...{ action }} />
   )
 }
 

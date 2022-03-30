@@ -3,15 +3,13 @@ import styled from 'styled-components'
 import Router from 'Router'
 import AuthProvider from 'providers/authProvider'
 
-const App = () => {
-  return (
-    <Main>
-      <AuthProvider>
-        <Router />
-      </AuthProvider>
-    </Main>
-  ) 
-}
+const App = () => (
+  <Main>
+    <AuthProvider>
+      <Router />
+    </AuthProvider>
+  </Main>
+)
 
 const Main = styled.main`
   width: 100%;

@@ -7,8 +7,8 @@ export const verifyToken = token => {
   const options = {
     method: 'GET',
     headers: {
-      authorization: `Bearer ${token}`
-    }
+      authorization: `Bearer ${token}`,
+    },
   }
   return fetchVerify(options)
 }

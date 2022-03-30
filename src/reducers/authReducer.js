@@ -3,11 +3,11 @@ export const authInitialState = {
   siginTimestamp: null,
   name: null,
   username: null,
-  token: null
+  token: null,
 }
 
 export const authReducer = (state, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'sigin':
       return {
         ...state,
@@ -15,7 +15,7 @@ export const authReducer = (state, action) => {
         siginTimestamp: Date.now(),
         name: action.name,
         username: action.username,
-        token: action.token
+        token: action.token,
       }
   }
 }

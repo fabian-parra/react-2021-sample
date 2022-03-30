@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-const Form = ({action}) => {
+const Form = ({ action }) => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault()
     action(username, password)
   }
@@ -13,11 +13,11 @@ const Form = ({action}) => {
   const onChangeValue = set => event => set(event.target.value)
 
   return (
-    <StyledForm onSubmit={handleSubmit} >
+    <StyledForm onSubmit={handleSubmit}>
       <Title>Identificate en la aplicaci&oacute;n</Title>
-      <Input type='text' placeholder='nombre de usuario' value={username} onChange={onChangeValue(setUsername)}/>
-      <Input type='password' placeholder='contraseña' value={password} onChange={onChangeValue(setPassword)}/>
-      <Button type='submit' value='Ingresar' />
+      <Input type="text" placeholder="nombre de usuario" value={username} onChange={onChangeValue(setUsername)} />
+      <Input type="password" placeholder="contraseña" value={password} onChange={onChangeValue(setPassword)} />
+      <Button type="submit" value="Ingresar" />
     </StyledForm>
   )
 }

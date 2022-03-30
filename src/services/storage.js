@@ -2,7 +2,7 @@ export const save = (key, data) => sessionStorage.setItem(key, JSON.stringify(da
 
 export const get = (key, fallbackData = null) => {
   const stringifyData = sessionStorage.getItem(key)
-  if(stringifyData) {
+  if (stringifyData) {
     return JSON.parse(stringifyData)
   }
   return fallbackData

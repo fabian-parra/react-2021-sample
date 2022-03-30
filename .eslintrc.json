@@ -1,0 +1,26 @@
+{
+  "extends": "airbnb",
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["node_modules", "src"],
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "jest/globals": true
+  },
+  "plugins": ["jest"],
+  "rules": {
+    "semi": ["error","never"],
+    "no-confusing-arrow": ["error", {"allowParens": false, "onlyOneSimpleParam": true}],
+    "react/function-component-definition": [0],
+    "arrow-parens": [2, "as-needed", { "requireForBlockBody": false }],
+    "react/jsx-one-expression-per-line": [0],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/no-array-index-key": [0],
+    "react/jsx-props-no-spreading": [0]
+  }
+}

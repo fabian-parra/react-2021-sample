@@ -5,6 +5,6 @@ import App from 'modules/App'
 
 render((
   <>
-    <GlobalStyle />  
+    <GlobalStyle />
     <App />
   </>), document.getElementById('root'))

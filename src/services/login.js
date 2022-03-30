@@ -6,8 +6,8 @@ const fetchAuth = fetchData(ENDPOINT)
 export const authenticateUser = (username, password) => {
   const options = {
     method: 'POST',
-    body: JSON.stringify({username, password}),
-    headers: { 'Content-Type': 'application/json' }
+    body: JSON.stringify({ username, password }),
+    headers: { 'Content-Type': 'application/json' },
   }
   return fetchAuth(options)
 }
