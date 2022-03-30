@@ -1,6 +1,7 @@
 import React, {
   useState, useReducer, useMemo, useEffect,
 } from 'react'
+import PropTypes from 'prop-types'
 import { authReducer, authInitialState } from 'reducers/authReducer'
 import { actions } from 'actions/authActions'
 import { save, get, remove } from 'services/storage'
@@ -40,6 +41,10 @@ const AuthProvider = ({ children }) => {
       )
       : <div>Cargando...</div>
   )
+}
+
+AuthProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export const useAuth = () => React.useContext(AuthContext)

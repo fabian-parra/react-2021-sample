@@ -17,5 +17,7 @@ export const authReducer = (state, action) => {
         username: action.username,
         token: action.token,
       }
+    default:
+      return { ...state }
   }
 }

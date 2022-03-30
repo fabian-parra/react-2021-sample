@@ -1,5 +1,6 @@
 {
   "extends": "airbnb",
+  "parser": "@babel/eslint-parser",
   "settings": {
     "import/resolver": {
       "node": {
@@ -15,12 +16,14 @@
   "plugins": ["jest"],
   "rules": {
     "semi": ["error","never"],
+    "no-nested-ternary": ["off"],
     "no-confusing-arrow": ["error", {"allowParens": false, "onlyOneSimpleParam": true}],
     "react/function-component-definition": [0],
     "arrow-parens": [2, "as-needed", { "requireForBlockBody": false }],
     "react/jsx-one-expression-per-line": [0],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/no-array-index-key": [0],
-    "react/jsx-props-no-spreading": [0]
+    "react/jsx-props-no-spreading": [0],
+    "import/prefer-default-export": [0]
   }
 }

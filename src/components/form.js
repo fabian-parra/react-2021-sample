@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const Form = ({ action }) => {
@@ -20,6 +21,10 @@ const Form = ({ action }) => {
       <Button type="submit" value="Ingresar" />
     </StyledForm>
   )
+}
+
+Form.propTypes = {
+  action: PropTypes.func.isRequired,
 }
 
 const StyledForm = styled.form`
