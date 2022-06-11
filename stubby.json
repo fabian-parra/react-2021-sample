@@ -30,5 +30,22 @@
       "latency": 1200,
       "status": 200
     }
+  },
+  {
+    "request": {
+      "method": "POST",
+      "url": "^/sigout",
+      "headers": {
+        "authorization": "Bearer tokenfakeforauthallcalls"
+      }
+    },
+    "response": {
+      "file": "stubs/sigout.json",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "latency": 1200,
+      "status": 200
+    }
   }
 ]

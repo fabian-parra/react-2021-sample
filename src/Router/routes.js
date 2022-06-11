@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Login = React.lazy(() => import('modules/Login'))
-const Dashboard = React.lazy(() => import('modules/Dashboard'))
+const Home = React.lazy(() => import('modules/Home'))
 
 export const routes = [
   {
@@ -11,9 +11,9 @@ export const routes = [
     isPublic: true,
   },
   {
-    path: '/dashboard',
+    path: '/',
     exact: true,
-    component: Dashboard,
+    component: Home,
     isPublic: false,
   },
 ]

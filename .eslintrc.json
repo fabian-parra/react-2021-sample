@@ -19,6 +19,7 @@
     "no-nested-ternary": ["off"],
     "no-confusing-arrow": ["error", {"allowParens": false, "onlyOneSimpleParam": true}],
     "react/function-component-definition": [0],
+    "react/require-default-props": [2, { "ignoreFunctionalComponents": true }],
     "arrow-parens": [2, "as-needed", { "requireForBlockBody": false }],
     "react/jsx-one-expression-per-line": [0],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],

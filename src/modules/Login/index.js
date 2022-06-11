@@ -20,7 +20,7 @@ const Login = () => {
 
   return (
     isLoadingMemo ? <div>Cargando</div>
-      : state.auth ? <Redirect to="/dashboard" />
+      : state.auth ? <Redirect to="/" />
         : <Form {...{ action }} />
   )
 }

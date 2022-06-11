@@ -17,6 +17,15 @@ export const authReducer = (state, action) => {
         username: action.username,
         token: action.token,
       }
+    case 'sigout':
+      return {
+        ...state,
+        auth: false,
+        siginTimestamp: null,
+        name: null,
+        username: null,
+        token: null,
+      }
     default:
       return { ...state }
   }
