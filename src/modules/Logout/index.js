@@ -20,9 +20,12 @@ const Logout = () => {
   }
 
   return (
-    <form onSubmit={onSubmit}>
-      <Button {...props} />
-    </form>
+    <>
+      <h1>Bienvenido {state.name}</h1>
+      <form onSubmit={onSubmit}>
+        <Button {...props} />
+      </form>
+    </>
   )
 }
 
