@@ -26,8 +26,8 @@ Sidebar.propTypes = {
 }
 
 const SidebarContainer = styled.div`
-  width: ${({ open }) => open ? '10rem' : '2rem'};
-  max-width: 10rem;
+  width: ${({ open }) => open ? '12rem' : '2rem'};
+  max-width: 12rem;
   transition: width .5s ease;
   padding: 1rem;
   border-right: black solid 1px;

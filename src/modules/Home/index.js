@@ -1,11 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import Logout from 'modules/Logout'
+import Navbar from 'modules/Navbar'
 import Sidebar from 'components/sidebar'
 
-const Home = () => (
+
+const Home = () => {
+  return (
   <>
-    <Sidebar>Sidebar</Sidebar>
+    <Sidebar>
+      <Navbar />
+    </Sidebar>
     <Content>
       <ContextualHeader>
         <Logout />
@@ -15,7 +20,8 @@ const Home = () => (
       </MainContent>
     </Content>
   </>
-)
+  )
+}
 
 const Content = styled.div`
   display: flex;
