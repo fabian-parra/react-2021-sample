@@ -3,10 +3,9 @@ import styled from 'styled-components'
 import Logout from 'modules/Logout'
 import Navbar from 'modules/Navbar'
 import Sidebar from 'components/sidebar'
+import InnerRoutes from 'Router/innerRoutes'
 
-
-const Home = () => {
-  return (
+const Home = () => (
   <>
     <Sidebar>
       <Navbar />
@@ -16,12 +15,11 @@ const Home = () => {
         <Logout />
       </ContextualHeader>
       <MainContent>
-        Main content
+        <InnerRoutes />
       </MainContent>
     </Content>
   </>
-  )
-}
+)
 
 const Content = styled.div`
   display: flex;

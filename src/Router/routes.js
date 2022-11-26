@@ -11,8 +11,8 @@ export const routes = [
     isPublic: true,
   },
   {
-    path: '/',
-    exact: true,
+    path: '/vev',
+    exact: false,
     component: Home,
     isPublic: false,
   },
