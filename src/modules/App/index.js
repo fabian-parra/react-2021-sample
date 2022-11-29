@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Router from 'Router'
+import { Router } from 'Router'
 import AuthProvider from 'providers/authProvider'
 
 const App = () => (

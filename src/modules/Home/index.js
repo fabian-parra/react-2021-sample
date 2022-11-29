@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Logout from 'modules/Logout'
 import Navbar from 'modules/Navbar'
 import Sidebar from 'components/sidebar'
-import InnerRoutes from 'Router/innerRoutes'
+import { InnerRoutes } from 'Router'
 
 const Home = () => (
   <>
