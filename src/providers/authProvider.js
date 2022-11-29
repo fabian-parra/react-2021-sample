@@ -39,7 +39,7 @@ const AuthProvider = ({ children }) => {
           {children}
         </AuthContext.Provider>
       )
-      : <div>Cargando...</div>
+      : <div>Cargando autentificación...</div>
   )
 }
 

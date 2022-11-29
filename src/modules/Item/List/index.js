@@ -1,7 +1,11 @@
 import React from 'react'
+import ProductProvider from 'providers/productProvider'
+import ItemList from './ItemList'
 
-const ItemList = () => (
-  <h2>Item List view</h2>
+const ItemListContainer = () => (
+  <ProductProvider>
+    <ItemList />
+  </ProductProvider>
 )
 
-export default ItemList
+export default ItemListContainer

@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <>
-      <h2>Menú</h2>
+      <h3>Menú</h3>
       <UnorderList elements={links} />
     </>
   )
