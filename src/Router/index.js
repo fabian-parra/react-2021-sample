@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import {
   BrowserRouter, Switch, Route, Redirect, useRouteMatch,
 } from 'react-router-dom'
-import PrivateRoute from './privateRoute'
+import ProtectedRoute from './ProtectedRoute'
 
 const Login = React.lazy(() => import('modules/Login'))
 const Home = React.lazy(() => import('modules/Home'))
@@ -14,7 +14,7 @@ export const Router = () => (
     <BrowserRouter>
       <Switch>
         <Route path="/sigin" component={Login} exact />
-        <PrivateRoute path="/vev" component={Home} exact={false} />
+        <ProtectedRoute path="/vev" component={Home} exact={false} />
         <Route path="*">
           <Redirect to="/sigin" />
         </Route>
