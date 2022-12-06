@@ -1,0 +1,42 @@
+[
+  {
+    "Item id": "12345",
+    "Nombre": "Producto A",
+    "Marca": "Marca A",
+    "Categoria": "Categoria 1",
+    "Tiempo para despachar": 5,
+    "unidades": 10
+  },
+  {
+    "Item id": "12346",
+    "Nombre": "Producto B",
+    "Marca": "Marca A",
+    "Categoria": "Categoria 2",
+    "Tiempo para despachar": 5,
+    "unidades": 0
+  },
+  {
+    "Item id": "12346",
+    "Nombre": "Producto B",
+    "Marca": "Marca A",
+    "Categoria": "Categoria 2",
+    "Tiempo para despachar": 5,
+    "unidades": 0
+  },
+  {
+    "Item id": "12347",
+    "Nombre": "Producto C",
+    "Marca": "Marca A",
+    "Categoria": "Categoria 2",
+    "Tiempo para despachar": 1,
+    "unidades": 3
+  },
+  {
+    "Item id": "12348",
+    "Nombre": "Producto D",
+    "Marca": "Marca A",
+    "Categoria": "Categoria 1",
+    "Tiempo para despachar": 10,
+    "unidades": 30
+  }
+]

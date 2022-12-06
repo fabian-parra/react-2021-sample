@@ -47,5 +47,22 @@
       "latency": 1200,
       "status": 200
     }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "url": "^/products",
+      "headers": {
+        "authorization": "Bearer tokenfakeforauthallcalls"
+      }
+    },
+    "response": {
+      "file": "stubs/products.json",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "latency": 2000,
+      "status": 200
+    }
   }
 ]
